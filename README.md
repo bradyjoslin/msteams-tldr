@@ -4,6 +4,8 @@
 
 tldr is a [MS Teams outgoing webhook bot](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-outgoing-webhook) that runs as a [Cloudflare Worker](https://workers.dev) and calls an [Algorithmia](https://algorithmia.com/)-hosted algorithm that performs the summarization.
 
+Built from the [MS Teams Outgoing Webhook Bot Workers Template](https://github.com/bradyjoslin/msteams-webhook-worker-template).
+
 The idea for this bot was inspired by a [blog post from the Concur Labs team](https://blog.concurlabs.com/how-to-write-a-tldr-chat-bot-ec02d9e1649c).
 
 ## Implementation Details
@@ -21,11 +23,11 @@ The worker replies with a JSON response that gets rendered as a threaded reply t
 }
 ```
 
-## Usage and Deployment
+## Initial Setup
 
-1. Create a Cloudflare account at [workers.dev](https://workers.dev) if you don't already have one.
+For the basics of getting started with Cloudflare Workers and Wrangler, refer to the [getting started guide](https://developers.cloudflare.com/workers/quickstart).
 
-1. Edit the `wrangler.toml` file with your Cloudflare `accountid`.
+1. Deployment is automated through the [Wrangler GitHub Action](https://github.com/cloudflare/wrangler-action).
 
 1. Create an outgoing webhook in MS Teams [(docs)](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-outgoing-webhook#create-an-outgoing-webhook), providing the URL for your worker.
 
@@ -46,7 +48,3 @@ The worker replies with a JSON response that gets rendered as a threaded reply t
 ![tldr](tldr.png)
 
 🎉
-
-## TODO
-
-Create GitHub Activity for automated deployments.
