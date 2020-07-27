@@ -1,6 +1,6 @@
 # TL;DR MS Teams Bot
 
-@mention the tldr (“Too Long; Didn't Read”) bot in a post or comment in MS Teams with a message containing a URL and to get a threaded reply with a 3 sentence summary of the web page.
+@mention the tldr (“Too Long; Didn't Read”) bot in a post or comment in MS Teams with a message containing a URL and to get a threaded reply with a 8 sentence summary of the web page.
 
 tldr is a [MS Teams outgoing webhook bot](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-outgoing-webhook) that runs as a [Cloudflare Worker](https://workers.dev) and calls an [Algorithmia](https://algorithmia.com/)-hosted algorithm that performs the summarization.
 

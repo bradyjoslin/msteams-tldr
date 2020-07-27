@@ -1,4 +1,5 @@
 const crypto = require('crypto')
+const summaryLength = 8
 
 function verifySignature(body, signature) {
   let bufSecret = Buffer.from(SECRET, 'base64')
@@ -21,11 +22,14 @@ async function getSummary(url) {
     method: 'POST',
     headers: {
       Authorization: ALGO_KEY,
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
     },
-    body: url,
+    body: JSON.stringify([url, summaryLength]),
   })
     .then(res => res.json())
     .then(json => json.result)
+    .catch(e => console.log(e))
 
   return summary
 }
