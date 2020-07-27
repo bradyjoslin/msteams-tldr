@@ -45,6 +45,8 @@ For the basics of getting started with Cloudflare Workers and Wrangler, refer to
    wrangler secret put ALGO_KEY
    ```
 
+1. The default number of setences in the summary is 8. You can customize this by changing the `summaryLength` variable.
+
 ![tldr](tldr.png)
 
 🎉
