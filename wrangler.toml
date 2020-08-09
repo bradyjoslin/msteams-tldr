@@ -1,6 +1,6 @@
-name = "tldr"
-type = "webpack"
 account_id = "d3765f1c5f3d3ed76be2701b78510d29"
-workers_dev = true
+name = "tldr"
 route = ""
+type = "javascript"
+workers_dev = true
 zone_id = ""
